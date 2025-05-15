@@ -1,0 +1,43 @@
+# Telegram Desktop by LBJ - 开发规则
+
+## 开发目的
+development_purpose: "在Telegram Desktop源码基础上添加新功能，同时保持兼容性和稳定性。"
+
+## 编码规范
+coding_standard: "严格遵循Telegram源码的编码规范，包括命名约定、格式化风格和模块组织结构。"
+
+## 代码组织规则
+code_organization: "保持与原Telegram项目一致的代码模块化结构，不随意更改既有架构，新功能应遵循良好的封装和模块化原则。"
+
+## 开发流程
+development_process: "每次开发前查看CHANGELOG.md、DEVELOPMENT.md和TODO.md三个文件，了解当前开发进度、已完成的功能和待开发的内容。"
+
+## 更新文档
+update_documentation: "每次修改代码后，必须更新CHANGELOG.md、DEVELOPMENT.md和TODO.md三个文件，记录变更内容、更新开发文档和修改任务状态。"
+
+## 版本控制
+version_control: "遵循语义化版本规则，每次功能更新或修复后更新版本号并在CHANGELOG.md中记录变更。"
+
+## 代码质量
+code_quality: "代码提交前进行自测，确保不引入新的bug；重要修改应有足够的注释说明实现逻辑和设计考量。"
+
+## 风格指南
+styling: "UI修改需保持与Telegram风格一致，任何样式修改都应当考虑所有支持的平台（Windows、macOS、Linux）。"
+
+## API使用
+api_usage: "使用Telegram API时，遵循官方文档规范，确保向下兼容性，处理好错误情况和边界条件。"
+
+## 本地化
+localization: "任何涉及用户界面文本的修改都应支持本地化，将新字符串添加到语言文件中。"
+
+## 性能考量
+performance: "确保新增功能不会明显影响应用性能，特别注意内存使用和UI响应性。"
+
+## 安全性
+security: "任何涉及用户数据或通信的功能必须考虑安全性，遵循Telegram的加密标准和数据保护措施。"
+
+## 文档
+documentation: "新功能应在TODO.md中标记为已完成，并在CHANGELOG.md中详细记录，必要时更新DEVELOPMENT.md。"
+
+## 特殊注意事项
+special_notes: "记住这是基于官方项目的修改版，始终关注官方项目的更新，适时合并有价值的更新到本项目中。" 
