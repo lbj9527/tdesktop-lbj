@@ -55,7 +55,7 @@ BEGIN
             VALUE "FileDescription", "Telegram Desktop Updater"
             VALUE "FileVersion", "5.14.1.0"
             VALUE "LegalCopyright", "Copyright (C) 2014-2025"
-            VALUE "ProductName", "Telegram Desktop"
+            VALUE "ProductName", "Telegram Desktop by lbj"
             VALUE "ProductVersion", "5.14.1.0"
         END
     END
