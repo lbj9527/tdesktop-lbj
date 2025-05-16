@@ -4,124 +4,206 @@
 
 本项目是基于 Telegram Desktop 官方客户端的修改版本，旨在添加新功能并优化用户体验。
 
-## 开发环境设置
+## 编译过程详解
 
-### 所需工具
+### 1. 编译环境准备
 
-- **CMake** (版本 3.25 - 3.31)
-- **Visual Studio 2022** (Windows 开发)
-- **Git** (版本控制)
-- **Python** (用于构建脚本)
+- **开发环境**：Visual Studio 2022 with 10.0.22000.0 SDK
+- **工作目录**：以D:\TBuild为例（以下称为BuildPath）
+- **子目录准备**：
+  - BuildPath\ThirdParty：第三方库
+  - BuildPath\Libraries：编译所需库
 
-### 克隆仓库
+### 2. 所需软件
 
-```bash
-git clone <repository-url>
-cd tdesktop-lbj
-git submodule update --init --recursive
-```
+- **Python 3.10**：需添加到PATH
+- **Git**：用于克隆代码
 
-### 构建项目
+### 3. 获取API凭证
 
-#### Windows (Visual Studio 2022)
+编译前需要获取Telegram API的`api_id`和`api_hash`
 
-1. 创建构建目录：
+### 4. 源代码准备
 
 ```bash
-mkdir build
-cd build
+# 在BuildPath目录执行
+git clone --recursive https://github.com/telegramdesktop/tdesktop.git
+tdesktop\Telegram\build\prepare\win.bat
 ```
 
-2. 生成 VS 解决方案：
+### 5. 项目配置与构建
 
 ```bash
-cmake .. -G "Visual Studio 17 2022" -A x64
+# 进入Telegram目录
+cd BuildPath\tdesktop\Telegram
+
+# 配置项目
+configure.bat -D TDESKTOP_API_ID=YOUR_API_ID -D TDESKTOP_API_HASH=YOUR_API_HASH
+
+# 打开生成的解决方案
+# BuildPath\tdesktop\out\Telegram.sln
+
+# 选择Telegram项目，构建Debug或Release版本
+# 编译结果位于 BuildPath\tdesktop\out\Debug 或 Release
 ```
 
-3. 在 Visual Studio 中打开解决方案：
-   - 打开 `Telegram.sln`
-   - 将配置设置为 "Release" 或 "Debug"
-   - 将 Telegram 项目设为启动项目
-   - 构建解决方案
+## 核心文件与目录结构
 
-#### Debug 版本构建
+### 1. 主要脚本文件
 
-```bash
-cmake --build . --config Debug
-```
+- **win.bat**：调用prepare.py准备构建环境
+- **configure.bat**：调用configure.py配置项目
+- **build.bat**：自动化构建项目
 
-#### Release 版本构建
+### 2. CMake文件功能
 
-```bash
-cmake --build . --config Release
-```
+- **根目录CMakeLists.txt**：定义项目基本信息与构建选项
+- **Telegram/CMakeLists.txt**：添加子模块、设置源文件和资源、链接依赖库
+- **cmake/target_*.cmake**：提供链接库、设置编译选项等辅助函数
+- **cmake/generate_*.cmake**：生成资源和处理平台特定构建需求
 
-## 项目结构
+### 3. 编译调用关系
 
-- `Telegram/` - 主要源代码目录
-  - `SourceFiles/` - C++源代码
-  - `Resources/` - 资源文件
-  - `ThirdParty/` - 第三方库
-- `cmake/` - CMake 配置文件
-- `CHANGELOG.md` - 版本变更记录
+1. `win.bat` → `prepare.py`：准备环境
+2. `configure.bat` → `configure.py` → `run_cmake.py`：配置项目生成构建文件
+3. CMake构建系统处理所有CMakeLists.txt文件生成VS解决方案
+4. Visual Studio编译所有文件生成最终的Telegram.exe
 
-## 开发指南
+## 添加新功能指南
 
-### 代码风格
+### 1. 添加新的命名空间
 
-- 使用 4 空格缩进
-- 使用驼峰命名法
-- 类名以大写字母开头
-- 变量和函数名以小写字母开头
+假设我们要添加一个名为`MyFeature`的新命名空间：
 
-### 提交流程
+1. **创建目录和文件结构**：
+   ```
+   Telegram\SourceFiles\my_feature\
+     ├── my_feature.cpp
+     ├── my_feature.h
+     └── 其他相关文件...
+   ```
 
-1. 创建新分支进行开发：
+2. **修改CMakeLists.txt**：
+   在`Telegram/CMakeLists.txt`文件中的`nice_target_sources`部分添加新文件：
+   ```cmake
+   nice_target_sources(Telegram ${src_loc}
+   PRIVATE
+       ${style_files}
+       
+       # 其他现有文件...
+       
+       # 添加新命名空间的文件
+       my_feature/my_feature.cpp
+       my_feature/my_feature.h
+       # 其他新增文件...
+   )
+   ```
 
-```bash
-git checkout -b feature/your-feature-name
-```
+3. **添加依赖项**（如需）：
+   ```cmake
+   target_link_libraries(Telegram
+   PRIVATE
+       # 现有依赖项...
+       
+       # 如果需要，添加新的依赖库
+       desktop-app::your_new_dependency
+   )
+   ```
 
-2. 进行代码修改
+4. **创建独立模块**（可选）：
+   如果功能较大，可创建独立库模块：
+   - 在`Telegram`目录下创建`lib_my_feature`文件夹
+   - 添加`lib_my_feature/CMakeLists.txt`文件
+   - 在主`Telegram/CMakeLists.txt`添加：`add_subdirectory(lib_my_feature)`
 
-3. 提交代码：
+### 2. 添加新的图标资源
 
-```bash
-git add .
-git commit -m "描述你的修改"
-```
+要添加新的图标资源，需要：
 
-4. 推送到仓库：
+1. **准备图标文件**：
+   - 将图标文件（如PNG、SVG格式）放入`Telegram/Resources`目录的适当子文件夹中
+   - 建议根据用途放入相应目录：
+     - `Telegram/Resources/icons`：一般图标
+     - `Telegram/Resources/art`：艺术资源
 
-```bash
-git push origin feature/your-feature-name
-```
+2. **更新QRC资源文件**：
+   - 编辑`Telegram/Resources/telegram.qrc`文件，添加新图标路径：
+   ```xml
+   <qresource prefix="/gui">
+       <!-- 现有图标... -->
+       <file>icons/my_feature/my_icon.png</file>
+   </qresource>
+   ```
 
-### 版本发布流程
+3. **对于主题相关图标**：
+   - 如果图标需要支持多主题，需要同时添加到不同主题的资源文件：
+     - `Telegram/Resources/icons/settings/themes/day.svg`
+     - `Telegram/Resources/icons/settings/themes/night.svg`
+   - 并更新样式表文件：
+     - 编辑`ui/td_colors.palette`等颜色配置文件
 
-1. 更新版本号
-2. 更新 CHANGELOG.md
-3. 创建新的标签
-4. 构建 Release 版本
-5. 发布
+4. **使用自定义图标**：
+   在代码中，通过`st::`命名空间或直接使用Qt资源路径访问：
+   ```cpp
+   // 使用Qt资源路径
+   QPixmap pixmap(":/gui/icons/my_feature/my_icon.png");
+   
+   // 或添加到样式文件后通过样式对象访问
+   auto &iconRef = st::myFeatureIcon;
+   ```
 
-## 常见问题
+5. **注册样式对象**（需要样式支持时）：
+   - 在`ui/style/style_*`相关文件中添加图标定义
+   - 重新生成style_*.cpp文件：
+     ```bash
+     cd BuildPath\tdesktop\Telegram
+     configure.bat -D TDESKTOP_API_ID=YOUR_API_ID -D TDESKTOP_API_HASH=YOUR_API_HASH
+     ```
 
-### 编译中断或停滞
+### 3. 重新编译项目
 
-- 检查系统资源使用情况
-- 尝试减少并行构建数量
-- 确保有足够的磁盘空间
+完成上述修改后，需要：
 
-### 依赖问题
+1. **重新配置项目**：
+   ```bash
+   cd BuildPath\tdesktop\Telegram
+   configure.bat -D TDESKTOP_API_ID=YOUR_API_ID -D TDESKTOP_API_HASH=YOUR_API_HASH
+   ```
 
-- 确保所有子模块已正确初始化
-- 检查 CMake 版本是否兼容
+2. **编译项目**：
+   - 方式1：使用Visual Studio打开`BuildPath\tdesktop\out\Telegram.sln`并生成
+   - 方式2：命令行编译：
+     ```bash
+     cd BuildPath\tdesktop\out
+     msbuild Telegram.sln /p:Configuration=Debug
+     # 或
+     msbuild Telegram.sln /p:Configuration=Release
+     ```
 
-## 联系方式
+### 4. 开发注意事项
 
-如有问题或建议，请联系项目维护者。
+1. **代码风格**：
+   - 遵循项目现有代码风格和命名规范
+   - 使用`auto`关键字定义变量类型（项目规范）
 
----
+2. **项目库使用**：
+   - RPL库：项目使用`rpl::`命名空间下的响应式编程库
+   - 示例：
+     ```cpp
+     auto subscription = rpl::single(123) | rpl::start_with_next([](int value) {
+         // 处理逻辑
+     }, lifetime);
+     ```
 
-_最后更新: 2023-11-18_
+3. **文档更新**：
+   - 修改`CHANGELOG.md`添加新功能说明
+   - 更新`DEVELOPMENT.md`补充开发文档
+   - 在`TODO.md`中标记完成的功能
+
+4. **预编译头**：
+   - 新文件通常需要包含预编译头：
+     ```cpp
+     #include "stdafx.h"
+     #include "my_feature/my_feature.h"
+     ```
+
