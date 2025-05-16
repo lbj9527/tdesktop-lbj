@@ -13,7 +13,7 @@ code_organization: "保持与原Telegram项目一致的代码模块化结构，�
 development_process: "每次开发前查看CHANGELOG.md、DEVELOPMENT.md和TODO.md三个文件，了解当前开发进度、已完成的功能和待开发的内容。"
 
 ## 更新文档
-update_documentation: "每次修改代码后，必须更新CHANGELOG.md、DEVELOPMENT.md和TODO.md三个文件，记录变更内容、更新开发文档和修改任务状态。"
+update_documentation: "每次修改代码后，必须更新CHANGELOG.md、和TODO.md三个文件，记录变更内容、更新开发文档和修改任务状态。"
 
 ## 版本控制
 version_control: "遵循语义化版本规则，每次功能更新或修复后更新版本号并在CHANGELOG.md中记录变更。"
