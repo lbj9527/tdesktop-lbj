@@ -22,6 +22,8 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_menu_my_stories" = "My Stories";
 "lng_menu_my_groups" = "My Groups";
 "lng_menu_my_channels" = "My Channels";
+"lng_transhub_title" = "TransHub";
+"lng_transhub_info" = "TransHub functionality is coming soon.\nThis will enable message downloading, uploading and forwarding management.";
 
 "lng_disable_notifications_from_tray" = "Disable notifications";
 "lng_enable_notifications_from_tray" = "Enable notifications";
@@ -1280,7 +1282,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_edit_privacy_phone_number_warning" = "Users who have your number saved in their contacts will also see it on Telegram.";
 "lng_edit_privacy_phone_number_always_empty" = "Always share with";
 "lng_edit_privacy_phone_number_never_empty" = "Never share with";
-"lng_edit_privacy_phone_number_exceptions" = "Add users or groups to override the settings above.";
+"lng_edit_privacy_phone_number_exceptions" = "Add users or groups to override the settings above.";
 "lng_edit_privacy_phone_number_always_title" = "Always share with";
 "lng_edit_privacy_phone_number_never_title" = "Never share with";
 
@@ -2060,7 +2062,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_action_ttl_changed_you" = "You set messages to auto-delete in {duration}";
 "lng_action_ttl_changed_channel" = "Messages in this channel will be automatically deleted after {duration}";
 "lng_action_ttl_global" = "{from} uses a self-destruct timer for all chats. All new messages in this chat will be automatically deleted after {duration} they are sent.";
-"lng_action_ttl_global_me" = "You set a self-destruct timer for all chats. All new messages in this chat will be automatically deleted after {duration} they’ve been sent.";
+"lng_action_ttl_global_me" = "You set a self-destruct timer for all chats. All new messages in this chat will be automatically deleted after {duration} they've been sent.";
 "lng_action_ttl_removed" = "{from} disabled the auto-delete timer";
 "lng_action_ttl_removed_you" = "You disabled the auto-delete timer";
 "lng_action_ttl_removed_channel" = "Messages in this channel will no longer be automatically deleted";
@@ -2719,7 +2721,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_business_about_chat_links" = "Create links that start a chat with you, suggesting the first message.";
 "lng_business_subtitle_sponsored" = "Ads in Channels";
 "lng_business_button_sponsored" = "Do Not Hide Ads";
-"lng_business_about_sponsored" = "As a Premium subscriber, you don’t see any ads on Telegram, but you can turn them on, for example, to view your own ads that you launched on the {link}";
+"lng_business_about_sponsored" = "As a Premium subscriber, you don't see any ads on Telegram, but you can turn them on, for example, to view your own ads that you launched on the {link}";
 "lng_business_about_sponsored_link" = "Telegram Ad Platform {emoji}";
 "lng_business_about_sponsored_url" = "https://ads.telegram.org";
 
@@ -3054,25 +3056,13 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_boost_channel_title_first_group" = "Enable stories for group";
 "lng_boost_channel_needs_unlock#one" = "{channel} needs **{count}** more boost to unlock new features.";
 "lng_boost_channel_needs_unlock#other" = "{channel} needs **{count}** more boosts to unlock new features.";
-//"lng_boost_channel_needs_first#one" = "{channel} needs **{count}** more boost to enable posting stories. Help make it possible!";
-//"lng_boost_channel_needs_first#other" = "{channel} needs **{count}** more boosts to enable posting stories. Help make it possible!";
 "lng_boost_channel_title_more" = "Help upgrade channel";
 "lng_boost_channel_title_more_group" = "Help upgrade group";
-//"lng_boost_channel_needs_more#one" = "{channel} needs **{count}** more boost to be able to {post}.";
-//"lng_boost_channel_needs_more#other" = "{channel} needs **{count}** more boosts to be able to {post}.";
 "lng_boost_channel_title_max" = "Maximum level reached";
 "lng_boost_channel_you_title" = "You boosted {channel}!";
-//"lng_boost_channel_you_first#one" = "This channel needs **{count}** more boost\nto enable stories.";
-//"lng_boost_channel_you_first#other" = "This channel needs **{count}** more boosts\nto enable stories.";
-//"lng_boost_channel_you_more#one" = "This channel needs **{count}** more boost\nto be able to {post}.";
-//"lng_boost_channel_you_more#other" = "This channel needs **{count}** more boosts\nto be able to {post}.";
 "lng_boost_channel_reached_first" = "This channel reached **Level 1** and can now post stories.";
 "lng_boost_channel_reached_more#one" = "This channel reached **Level {count}** and can now {post}.";
 "lng_boost_channel_reached_more#other" = "This channel reached **Level {count}** and can now {post}.";
-//"lng_boost_channel_you_first_group#one" = "This group needs **{count}** more boost\nto enable stories.";
-//"lng_boost_channel_you_first_group#other" = "This group needs **{count}** more boosts\nto enable stories.";
-//"lng_boost_channel_you_more_group#one" = "This group needs **{count}** more boost\nto be able to {post}.";
-//"lng_boost_channel_you_more_group#other" = "This group needs **{count}** more boosts\nto be able to {post}.";
 "lng_boost_channel_reached_first_group" = "This group reached **Level 1** and can now post stories.";
 "lng_boost_channel_reached_more_group#one" = "This group reached **Level {count}** and can now {post}.";
 "lng_boost_channel_reached_more_group#other" = "This group reached **Level {count}** and can now {post}.";
@@ -3154,11 +3144,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
 "lng_boost_channel_ask" = "Ask your **Premium** subscribers to boost your channel with this link:";
 "lng_boost_channel_ask_button" = "Copy Link";
-//"lng_boost_channel_or" = "or";
-//"lng_boost_channel_gifting" = "Boost your channel by gifting your subscribers Telegram Premium. {link}";
-//"lng_boost_channel_gifting_link" = "Get boosts >";
 "lng_boost_group_ask" = "Ask your **Premium** members to boost your group with this link:";
-//"lng_boost_group_gifting" = "Boost your group by gifting your members Telegram Premium. {link}";
 
 "lng_boost_channel_title_autotranslate" = "Autotranslation of Messages";
 "lng_boost_channel_needs_level_autotranslate#one" = "Your channel needs to reach **Level {count}** to enable autotranslation of messages.";
@@ -3941,8 +3927,8 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_dialogs_show_archive_in_search" = "With results from archive";
 
 "lng_dialogs_suggestions_birthday_title" = "Add your birthday! 🎂";
-"lng_dialogs_suggestions_birthday_about" = "Let your contacts know when you’re celebrating.";
-"lng_dialogs_suggestions_birthday_contact_title" = "It’s {text}'s **birthday** today! 🎂";
+"lng_dialogs_suggestions_birthday_about" = "Let your contacts know when you're celebrating.";
+"lng_dialogs_suggestions_birthday_contact_title" = "It's {text}'s **birthday** today! 🎂";
 "lng_dialogs_suggestions_birthday_contact_about" = "Send them a Gift.";
 "lng_dialogs_suggestions_birthday_contacts_title#one" = "{count} contact have **birthdays** today! 🎂";
 "lng_dialogs_suggestions_birthday_contacts_title#other" = "{count} contacts have **birthdays** today! 🎂";
@@ -3955,7 +3941,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_dialogs_suggestions_premium_restore_title" = "Get Premium back with up to {text} off";
 "lng_dialogs_suggestions_premium_restore_about" = "Your Telegram Premium has recently expired. Tap here to extend it.";
 "lng_dialogs_suggestions_premium_grace_title" = "⚠️ Your Premium subscription is expiring!";
-"lng_dialogs_suggestions_premium_grace_about" = "Don’t lose access to exclusive features.";
+"lng_dialogs_suggestions_premium_grace_about" = "Don't lose access to exclusive features.";
 "lng_dialogs_suggestions_userpics_title" = "Add your photo! 📸";
 "lng_dialogs_suggestions_userpics_about" = "Help your friends spot you easily.";
 "lng_dialogs_suggestions_credits_sub_low_title#one" = "{emoji} {count} Star needed for {channels}";
@@ -5231,7 +5217,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_restricted_send_files_all" = "Sending files isn't allowed in this group.";
 "lng_restricted_send_voice_messages_all" = "Sending voice messages isn't allowed in this group.";
 "lng_restricted_send_video_messages_all" = "Sending video messages isn't allowed in this group.";
-"lng_restricted_send_stickers_all" = "Stickers aren’t allowed in this group.";
+"lng_restricted_send_stickers_all" = "Stickers aren't allowed in this group.";
 "lng_restricted_send_gifs_all" = "Sending GIFs isn't allowed in this group.";
 "lng_restricted_send_inline_all" = "Sending inline content isn't allowed in this group.";
 "lng_restricted_send_polls_all" = "Sorry, sending polls is not allowed in this group.";
@@ -5496,7 +5482,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_forward_many_title#one" = "Forward {count} Message";
 "lng_forward_many_title#other" = "Forward {count} Messages";
 "lng_forward_about" = "You can remove the sender's name so that this message will look like it was sent by you.";
-"lng_forward_many_about" = "You can remove the senders’ names so that these messages will look like they were sent by you.";
+"lng_forward_many_about" = "You can remove the senders' names so that these messages will look like they were sent by you.";
 "lng_forward_show_sender" = "Show sender name";
 "lng_forward_show_senders" = "Show sender names";
 "lng_forward_show_caption" = "Show caption";
@@ -5875,7 +5861,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_filters_checkbox_remove_channel" = "Remove channel from all folders";
 
 "lng_filters_link_create" = "Create an Invite Link";
-"lng_filters_link_cant" = "You can’t share folders which include or exclude specific chat types like 'Groups', 'Contacts', etc.";
+"lng_filters_link_cant" = "You can't share folders which include or exclude specific chat types like 'Groups', 'Contacts', etc.";
 "lng_filters_link_about" = "Share access to some of this folder's groups and channels with others.";
 "lng_filters_link_about_many" = "Create more links to set up different access levels for different people.";
 "lng_filters_link_title" = "Share Folder";
@@ -5901,7 +5887,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_filters_link_name_it" = "Name Link";
 "lng_filters_link_delete_sure" = "Are you sure you want to delete this link?";
 "lng_filters_link_qr_about" = "Anyone on Telegram can scan this code to add the folder and join all the chats included in its invite link.";
-"lng_filters_link_group_admin_error" = "One of the groups in this folder can’t be added because one of its admins has too many groups and channels.";
+"lng_filters_link_group_admin_error" = "One of the groups in this folder can't be added because one of its admins has too many groups and channels.";
 "lng_filters_by_link_title" = "Add Folder";
 "lng_filters_by_link_sure" = "Do you want to add the chat folder {folder} and join its groups and channels?";
 "lng_filters_by_link_join#one" = "{count} chat to join";
@@ -5981,7 +5967,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
 "lng_sponsored_hide_ads" = "Hide";
 "lng_sponsored_title" = "What are sponsored messages?";
-"lng_sponsored_info_description1" = "Unlike other apps, Telegram never uses your private data to target ads. Sponsored messages on Telegram are based solely on the topic of the public channels in which they are shown. This means that no user data is mined or analyzed to display ads, and every user viewing a channel on Telegram sees the same sponsored messages.\n\nUnlike other apps, Telegram doesn't track whether you tapped on a sponsored message and doesn't profile you based on your activity. We also prevent external links in sponsored messages to ensure that third parties can’t spy on our users. We believe that everyone has the right to privacy, and technological platforms should respect that.\n\nTelegram offers a free and unlimited service to hundreds of millions of users, which involves significant server and traffic costs. In order to remain independent and stay true to its values, Telegram developed a paid tool to promote messages with user privacy in mind. We welcome responsible advertisers at:";
+"lng_sponsored_info_description1" = "Unlike other apps, Telegram never uses your private data to target ads. Sponsored messages on Telegram are based solely on the topic of the public channels in which they are shown. This means that no user data is mined or analyzed to display ads, and every user viewing a channel on Telegram sees the same sponsored messages.\n\nUnlike other apps, Telegram doesn't track whether you tapped on a sponsored message and doesn't profile you based on your activity. We also prevent external links in sponsored messages to ensure that third parties can't spy on our users. We believe that everyone has the right to privacy, and technological platforms should respect that.\n\nTelegram offers a free and unlimited service to hundreds of millions of users, which involves significant server and traffic costs. In order to remain independent and stay true to its values, Telegram developed a paid tool to promote messages with user privacy in mind. We welcome responsible advertisers at:";
 "lng_sponsored_info_description2" = "Sponsored Messages are currently in test mode. Once they are fully launched and allow Telegram to cover its basic costs, we will start sharing ad revenue with the owners of public channels in which sponsored messages are displayed.\n\nOnline ads should no longer be synonymous with abuse of user privacy. Let us redefine how a tech company should operate – together.";
 "lng_sponsored_info_menu" = "Advertiser info";
 "lng_sponsored_info_submenu" = "Advertiser: {text}";
@@ -6162,7 +6148,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_stories_channel_save_sure_many#one" = "Do you want to post {count} story to the channel page?";
 "lng_stories_channel_save_sure_many#other" = "Do you want to post {count} stories to the channel page?";
 "lng_stories_channel_save_done" = "This story is posted to the channel page.";
-"lng_stories_channel_save_done_many#one" = "{count} story posted to the channel page.";
+"lng_stories_channel_save_done_many#one" = "{count} story posted to the channel page.";
 "lng_stories_channel_save_done_many#other" = "{count} stories posted to the channel page.";
 "lng_stories_channel_save_done_about" = "Posted stories can be viewed by others on the channel page until an admin removes them.";
 "lng_stories_channel_archive_sure" = "Do you want to hide this story from the channel page?";

@@ -21,25 +21,31 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 [[nodiscard]] QString langMonthFull(const QDate &date);
 [[nodiscard]] QString langDayOfWeek(int index);
 
-[[nodiscard]] inline QString langDayOfWeek(const QDate &date) {
-	return langDayOfWeek(date.dayOfWeek());
+[[nodiscard]] inline QString langDayOfWeek(const QDate &date)
+{
+  return langDayOfWeek(date.dayOfWeek());
 }
 
 [[nodiscard]] QString langDateTime(const QDateTime &date);
 [[nodiscard]] QString langDateTimeFull(const QDateTime &date);
 [[nodiscard]] bool langFirstNameGoesSecond();
 
-namespace Lang {
+namespace Lang
+{
 
-[[nodiscard]] QString Id();
-[[nodiscard]] rpl::producer<> Updated();
-[[nodiscard]] QString GetNonDefaultValue(const QByteArray &key);
-[[nodiscard]] QString DefaultLanguageId();
-[[nodiscard]] QString LanguageIdOrDefault(const QString &id);
+  [[nodiscard]] QString Id();
+  [[nodiscard]] rpl::producer<> Updated();
+  [[nodiscard]] QString GetNonDefaultValue(const QByteArray &key);
+  [[nodiscard]] QString DefaultLanguageId();
+  [[nodiscard]] QString LanguageIdOrDefault(const QString &id);
 
-[[nodiscard]] tr::phrase<> Month(int index);
-[[nodiscard]] tr::phrase<> MonthSmall(int index);
-[[nodiscard]] tr::phrase<> MonthDay(int index);
-[[nodiscard]] tr::phrase<> Weekday(int index);
+  [[nodiscard]] tr::phrase<> Month(int index);
+  [[nodiscard]] tr::phrase<> MonthSmall(int index);
+  [[nodiscard]] tr::phrase<> MonthDay(int index);
+  [[nodiscard]] tr::phrase<> Weekday(int index);
 
 } // namespace Lang
+
+inline constexpr auto lng_filters_setup = "filters_setup";
+inline constexpr auto lng_transhub_title = "transhub_title";
+inline constexpr auto lng_transhub_info = "transhub_info";

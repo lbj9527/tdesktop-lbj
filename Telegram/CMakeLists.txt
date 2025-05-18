@@ -1688,6 +1688,8 @@ PRIVATE
     stdafx.h
     tray.cpp
     tray.h
+    boxes/transhub_box.h
+    boxes/transhub_box.cpp
 )
 
 if (NOT build_winstore)

@@ -85,3 +85,4 @@ foldersPoo: icon {{ "folders/folders_poo", sideBarIconFg }};
 foldersPooActive: icon {{ "folders/folders_poo", sideBarIconFgActive }};
 
 filtersEdit: icon {{ "folders/folders_edit", sideBarIconFg }};
+filtersTransHub: icon {{ "folders/folders_transhub", sideBarIconFg }};
