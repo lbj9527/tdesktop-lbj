@@ -228,7 +228,7 @@ namespace Window
     _transhub = prepareButton(
         _container,
         -2, // 使用一个不会被占用的负值作为ID
-        {TextWithEntities{u"TransHub"_q}},
+        {TextWithEntities{tr::lng_transhub_title(tr::now)}},
         Ui::FilterIcon::TransHub);
     _transhub->setClickedCallback([=]
                                   {
