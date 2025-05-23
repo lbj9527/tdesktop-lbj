@@ -1,0 +1,117 @@
+/*
+这是TransHub功能的中文示例语言文件。
+请将这些字符串添加到:
+out/Release/Resources/lang_zh-hans.strings
+*/
+
+// 主菜单和导航
+"lng_transhub_title" = "传输中心";  // 已存在
+"lng_transhub_info" = "传输中心功能即将推出。\n这将实现消息下载、上传和转发管理。";  // 已存在
+
+// 导航标签
+"lng_transhub_tab_forward" = "转发";
+"lng_transhub_tab_download" = "下载";
+"lng_transhub_tab_upload" = "上传";
+"lng_transhub_tab_monitor" = "监听";
+
+// 通用UI元素
+"lng_transhub_start" = "开始";
+"lng_transhub_stop" = "停止";
+"lng_transhub_rules" = "规则";
+"lng_transhub_logs" = "日志";
+"lng_transhub_current_rule" = "当前规则: {rule}";
+"lng_transhub_progress" = "{done}/{total}个";
+"lng_transhub_progress_percent" = "{percent}%";
+"lng_transhub_welcome_message" = "欢迎使用传输中心！\n此工具可帮助您管理Telegram消息传输。";
+"lng_transhub_empty_rules" = "未找到规则。创建新规则开始使用。";
+
+// 转发部分
+"lng_transhub_forward_rules" = "转发规则";
+"lng_transhub_forward_records" = "转发记录";
+"lng_transhub_forward_original_format" = "原格式转发";
+"lng_transhub_forward_source" = "源频道/群组";
+"lng_transhub_forward_target" = "目标频道/群组";
+"lng_transhub_forward_latest_id" = "最新开始ID: {id}，总转发数量: {count}";
+"lng_transhub_forward_media_types" = "媒体类型: {types}";
+"lng_transhub_forward_detect_username" = "是否检测源文本中的@xxx: {value}";
+"lng_transhub_forward_detect_links" = "是否检测源文本中的http/https链接: {value}";
+"lng_transhub_forward_send_thumbnail" = "是否发送缩略图: {value}";
+"lng_transhub_forward_custom_format" = "自定义格式为: {value}";
+"lng_transhub_forward_auto_watermark" = "是否自动水印: {value}";
+"lng_transhub_forward_watermark_text" = "水印文字:";
+"lng_transhub_forward_start" = "开始转发";
+"lng_transhub_forward_stop" = "停止转发";
+"lng_transhub_forward_remove_description" = "移除描述文字";
+"lng_transhub_forward_all_media_types" = "所有媒体类型";
+"lng_transhub_forward_welcome_message" = "欢迎消息:";
+
+// 下载部分
+"lng_transhub_download_rules" = "下载规则";
+"lng_transhub_download_records" = "下载记录";
+"lng_transhub_download_use_custom_format" = "使用自定义小格式";
+"lng_transhub_download_check_dir_size" = "检查目录大小";
+"lng_transhub_download_source" = "源频道/群组";
+"lng_transhub_download_latest_id" = "最新开始ID: {id}，总下载数量: {count}";
+"lng_transhub_download_keywords_enabled" = "关键词下载已开启: {value}";
+"lng_transhub_download_keywords" = "关键词规则:";
+"lng_transhub_download_media_types" = "要下载的类型: {types}";
+"lng_transhub_download_start" = "开始下载";
+"lng_transhub_download_stop" = "停止下载";
+"lng_transhub_download_speed" = "{speed}/秒";
+"lng_transhub_download_directory" = "下载目录";
+"lng_transhub_download_search" = "搜索";
+
+// 上传部分
+"lng_transhub_upload_rules" = "上传规则";
+"lng_transhub_upload_records" = "上传记录";
+"lng_transhub_upload_target" = "目标频道/群组";
+"lng_transhub_upload_description_source" = "说明文本来源: {source}";
+"lng_transhub_upload_send_thumbnail" = "是否发送缩略图: {value}";
+"lng_transhub_upload_collection_images" = "集合图片相关内容: {value}";
+"lng_transhub_upload_start" = "开始上传";
+"lng_transhub_upload_stop" = "停止上传";
+"lng_transhub_upload_directory" = "上传目录";
+"lng_transhub_upload_speed" = "{speed}/秒";
+"lng_transhub_upload_select_files" = "选择文件";
+"lng_transhub_upload_welcome_message" = "欢迎消息:";
+
+// 监听部分
+"lng_transhub_monitor_rules" = "监听规则";
+"lng_transhub_monitor_source" = "源频道/群组";
+"lng_transhub_monitor_media_types" = "媒体类型: {types}";
+"lng_transhub_monitor_text_replace" = "文本替换规则:";
+"lng_transhub_monitor_custom_format" = "自定义格式为: {value}";
+"lng_transhub_monitor_forward_enabled" = "是否同时转发: {value}";
+"lng_transhub_monitor_interval" = "间隔时间: {seconds}秒";
+"lng_transhub_monitor_start" = "开始监听";
+"lng_transhub_monitor_stop" = "停止监听";
+"lng_transhub_monitor_stop_date" = "监听停止日期";
+"lng_transhub_monitor_welcome_message" = "欢迎消息:";
+
+// 布尔值
+"lng_transhub_true" = "是";
+"lng_transhub_false" = "否";
+
+// 媒体类型
+"lng_transhub_media_video" = "视频";
+"lng_transhub_media_photo" = "图片";
+"lng_transhub_media_file" = "文件";
+"lng_transhub_media_audio" = "音频";
+
+// 消息和通知
+"lng_transhub_task_completed" = "任务已成功完成。";
+"lng_transhub_task_failed" = "任务失败: {error}";
+"lng_transhub_confirm_stop" = "确定要停止当前任务吗？";
+"lng_transhub_rule_saved" = "规则已保存成功。";
+"lng_transhub_rule_deleted" = "规则已删除。";
+"lng_transhub_create_rule" = "创建新规则";
+"lng_transhub_edit_rule" = "编辑规则";
+"lng_transhub_delete_rule" = "删除规则";
+"lng_transhub_clear_logs" = "清空日志";
+
+// 窗口标题
+"lng_transhub_window_title" = "传输中心";
+"lng_transhub_window_forward" = "传输中心 - 转发";
+"lng_transhub_window_download" = "传输中心 - 下载";
+"lng_transhub_window_upload" = "传输中心 - 上传";
+"lng_transhub_window_monitor" = "传输中心 - 监听"; 

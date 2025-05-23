@@ -1,0 +1,118 @@
+/*
+This file is an example language file for TransHub feature.
+Add these strings to both:
+1. Telegram/Resources/langs/lang.strings (English)
+2. out/Release/Resources/lang_zh-hans.strings (Chinese)
+*/
+
+// Main Menu and Navigation
+"lng_transhub_title" = "TransHub";  // 已存在
+"lng_transhub_info" = "TransHub functionality is coming soon.\nThis will enable message downloading, uploading and forwarding management.";  // 已存在
+
+// Navigation Tabs
+"lng_transhub_tab_forward" = "Forward";
+"lng_transhub_tab_download" = "Download";
+"lng_transhub_tab_upload" = "Upload";
+"lng_transhub_tab_monitor" = "Monitor";
+
+// Common UI Elements
+"lng_transhub_start" = "Start";
+"lng_transhub_stop" = "Stop";
+"lng_transhub_rules" = "Rules";
+"lng_transhub_logs" = "Logs";
+"lng_transhub_current_rule" = "Current Rule: {rule}";
+"lng_transhub_progress" = "{done}/{total}";
+"lng_transhub_progress_percent" = "{percent}%";
+"lng_transhub_welcome_message" = "Welcome to TransHub!\nThis tool helps you manage Telegram message transfers.";
+"lng_transhub_empty_rules" = "No rules found. Create a new rule to start.";
+
+// Forward Section
+"lng_transhub_forward_rules" = "Forward Rules";
+"lng_transhub_forward_records" = "Forward Records";
+"lng_transhub_forward_original_format" = "Original Format";
+"lng_transhub_forward_source" = "Source Channel/Group";
+"lng_transhub_forward_target" = "Target Channel/Group";
+"lng_transhub_forward_latest_id" = "Latest Start ID: {id}, Total Forwarded: {count}";
+"lng_transhub_forward_media_types" = "Media Types: {types}";
+"lng_transhub_forward_detect_username" = "Detect @username in source text: {value}";
+"lng_transhub_forward_detect_links" = "Detect http/https links in source text: {value}";
+"lng_transhub_forward_send_thumbnail" = "Send thumbnail: {value}";
+"lng_transhub_forward_custom_format" = "Custom format: {value}";
+"lng_transhub_forward_auto_watermark" = "Auto watermark: {value}";
+"lng_transhub_forward_watermark_text" = "Watermark text:";
+"lng_transhub_forward_start" = "Start Forwarding";
+"lng_transhub_forward_stop" = "Stop Forwarding";
+"lng_transhub_forward_remove_description" = "Remove Description Text";
+"lng_transhub_forward_all_media_types" = "All Media Types";
+"lng_transhub_forward_welcome_message" = "Welcome message:";
+
+// Download Section
+"lng_transhub_download_rules" = "Download Rules";
+"lng_transhub_download_records" = "Download Records";
+"lng_transhub_download_use_custom_format" = "Use custom small format";
+"lng_transhub_download_check_dir_size" = "Check Directory Size";
+"lng_transhub_download_source" = "Source Channel/Group";
+"lng_transhub_download_latest_id" = "Latest Start ID: {id}, Total Downloaded: {count}";
+"lng_transhub_download_keywords_enabled" = "Keyword download is enabled: {value}";
+"lng_transhub_download_keywords" = "Keywords:";
+"lng_transhub_download_media_types" = "Media types to download: {types}";
+"lng_transhub_download_start" = "Start Download";
+"lng_transhub_download_stop" = "Stop Download";
+"lng_transhub_download_speed" = "{speed}/S";
+"lng_transhub_download_directory" = "Download Directory";
+"lng_transhub_download_search" = "Search";
+
+// Upload Section
+"lng_transhub_upload_rules" = "Upload Rules";
+"lng_transhub_upload_records" = "Upload Records";
+"lng_transhub_upload_target" = "Target Channel/Group";
+"lng_transhub_upload_description_source" = "Description text source: {source}";
+"lng_transhub_upload_send_thumbnail" = "Send thumbnail: {value}";
+"lng_transhub_upload_collection_images" = "Collection images content: {value}";
+"lng_transhub_upload_start" = "Start Upload";
+"lng_transhub_upload_stop" = "Stop Upload";
+"lng_transhub_upload_directory" = "Upload Directory";
+"lng_transhub_upload_speed" = "{speed}/S";
+"lng_transhub_upload_select_files" = "Select Files";
+"lng_transhub_upload_welcome_message" = "Welcome message:";
+
+// Monitor Section
+"lng_transhub_monitor_rules" = "Monitor Rules";
+"lng_transhub_monitor_source" = "Source Channel/Group";
+"lng_transhub_monitor_media_types" = "Media Types: {types}";
+"lng_transhub_monitor_text_replace" = "Text replacement rules:";
+"lng_transhub_monitor_custom_format" = "Custom format: {value}";
+"lng_transhub_monitor_forward_enabled" = "Forward enabled: {value}";
+"lng_transhub_monitor_interval" = "Interval: {seconds} seconds";
+"lng_transhub_monitor_start" = "Start Monitoring";
+"lng_transhub_monitor_stop" = "Stop Monitoring";
+"lng_transhub_monitor_stop_date" = "Monitoring stop date";
+"lng_transhub_monitor_welcome_message" = "Welcome message:";
+
+// Boolean values
+"lng_transhub_true" = "True";
+"lng_transhub_false" = "False";
+
+// Media types
+"lng_transhub_media_video" = "Video";
+"lng_transhub_media_photo" = "Photo";
+"lng_transhub_media_file" = "File";
+"lng_transhub_media_audio" = "Audio";
+
+// Messages and Notifications
+"lng_transhub_task_completed" = "Task completed successfully.";
+"lng_transhub_task_failed" = "Task failed: {error}";
+"lng_transhub_confirm_stop" = "Are you sure you want to stop the current task?";
+"lng_transhub_rule_saved" = "Rule saved successfully.";
+"lng_transhub_rule_deleted" = "Rule deleted.";
+"lng_transhub_create_rule" = "Create New Rule";
+"lng_transhub_edit_rule" = "Edit Rule";
+"lng_transhub_delete_rule" = "Delete Rule";
+"lng_transhub_clear_logs" = "Clear Logs";
+
+// Window titles
+"lng_transhub_window_title" = "TransHub";
+"lng_transhub_window_forward" = "TransHub - Forward";
+"lng_transhub_window_download" = "TransHub - Download";
+"lng_transhub_window_upload" = "TransHub - Upload";
+"lng_transhub_window_monitor" = "TransHub - Monitor"; 
