@@ -123,28 +123,7 @@ transhub/
 
 ### 8. 修改 CMakeLists.txt
 
-在 `Telegram/SourceFiles/CMakeLists.txt` 文件中添加新的源文件：
-
-```cmake
-nice_target_sources(Telegram ${src_loc}
-PRIVATE
-    # 现有文件...
-
-    # TransHub 功能文件
-    transhub/transhub_window.cpp
-    transhub/transhub_window.h
-    transhub/transhub_common.cpp
-    transhub/transhub_common.h
-    transhub/transhub_forward.cpp
-    transhub/transhub_forward.h
-    transhub/transhub_download.cpp
-    transhub/transhub_download.h
-    transhub/transhub_upload.cpp
-    transhub/transhub_upload.h
-    transhub/transhub_monitor.cpp
-    transhub/transhub_monitor.h
-)
-```
+在 `Telegram/CMakeLists.txt` 文件中添加新的源文件：
 
 ### 9. 保留侧边栏入口点
 
